@@ -1,0 +1,7 @@
+For se utiliza como un escenario if para bucles complejos, se compone de una variable, una expresión condicional y un incremento a la variable. El Bucle evaluará la expresión condicional si es true, se ejecutará nuevamente, si es false dejará de funcionar.
+
+&& es un operador logico descrito con dos simbolos, su funcioón es evaluar dos expresiones y devolver verdadero si ambas expresiones son true, si una de las expresiones es false devolvera false
+
+|| es un operador lógico descrito con dos barras verticales, determinará si una de las expresiones es true, devolverá true si una (o ambas) de las expresiones es true. Devolverá false si AMBAS expresiones son false, es la versión más ligera de && 
+
+! es un operador que sirve para negar una operación, sirve para devolver el valor booleano opuesto de lo que se le pasa.
