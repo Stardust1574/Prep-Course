@@ -1,0 +1,7 @@
+Los objetos en Javascript son un recopilatorio de claves y valores, sirven para almacenar estos a modo de de conjunto.
+
+Las propiedades son los datos contenidos en los valores.
+
+Métodos son las funciones guardadas dentro de los objetos
+
+Bucle for in son bucles hechos especificamente para usarlo con los objetos ya que estos no contienen indices numéricos.
