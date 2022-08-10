@@ -1,0 +1,91 @@
+Funciones Callback
+
+Las funciones callback sirven para invocar una función que fue escrita anteriormente sin la necesidad de detallarla.
+
+function mayuscula (nombre) {
+
+var caracter = nombre [0].toUpperCase () + nombre.slice (1);
+return caracter
+
+// ALTERNATIVAMENTE 
+return nombre[0].charAt.toUpperCase () + nombre.slice (1);
+ 
+}
+
+function invocarCallback (cb) {
+
+ return cb();
+
+}
+
+function operacionMatematica (n1, n2, cb) {
+
+ return cb (n1, n2) 
+}
+
+function sumarArray (numeros, cb) {
+0
+ var resultado = numeros.reduce (acc, res)  => {
+ return acc + res;
+})
+cb(resultado) 
+
+// ALTERNATIVAMENTE 
+
+var sumar = 0
+ numeros.forEach(elementoDelArreglo => {
+   sumar = sumar + elementoDelArreglo;
+});
+cb(sumar)
+
+}
+
+function forEach(array, cb) {
+
+ for (var i = 0; i < array.length; i++){
+  cb (array[i])
+
+ // ALTERNATIVAMENTE 
+
+ array.forEach (function (elemento){
+  cb(elemento)
+)}
+ 
+ // SIMPLIFICADO
+ array.forEach(cb)
+}
+
+function map (array, cb){
+
+ var nuevoArray = [];
+ for (i = 0; i < array.length; i++){
+ nuevoArray.push  (cb(array[i]));
+
+} return nuevoArray
+
+ // ALTERNATIVAMENTE 
+
+ var nuevoArray = array.map(function (elemento){
+   return cb (elemento)
+) 
+ return nuevoArray
+}
+
+
+function filter (array) {
+
+ var nuevoArray = [];
+ for (var i = 0; i < array.length; i++){
+  if (array[i][0] === "a") {
+  nuevoArray.push(array[i]);
+} return nuevoArray
+
+
+// ALTERNATIVAMENTE 
+
+ var nuevoArray = array.filter(function(palabra){
+ if (palabra[0] === "a")
+ return palabra
+}
+ return nuevoArray
+}
