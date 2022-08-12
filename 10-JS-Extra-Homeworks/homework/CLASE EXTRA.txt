@@ -1,0 +1,153 @@
+function objetoamatriz (objeto) {
+
+ var arreglo = []
+ for (var propiedad in objeto){
+   arreglo.push ([propiedad, objeto[propiedad]]) 
+}
+return arreglo
+}
+
+//al principio hay un objeto, se desea devolver un arreglo, establecemos una variable que tenga un arreglo, colocamos un for in en donde establezcamos la variable propiedad en el objeto, que a su ves haga un push como se pide en el ejercicio.
+
+
+Documentación de FOR IN
+ https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for...in
+
+// BUSCAR OBJECT.ENTRIES() en developer Mozilla
+
+//ALTERNATIVAMENTE 
+ return object.entries(objeto) 
+
+function numberOfCharacters (string) {
+
+ var objeto ={};
+ for (var i = 0; i <string.length; i++){
+   if(!objeto.hasOwnProperty(string[i])){
+       objeto[string[i]] = 0;
+}
+    objeto[string[i]] +=1;
+  //objeto[string[i]] = objeto[string[i]] + 1
+ // objeto[string[i]]++
+  }
+  return objeto;
+}
+// TENEMOS EL STRING, ESTABLECEMOS UN OBJETO VACIO, RECORREMOS CON UN CLICLO FOR, PREGUNTAR SI TIENE LA PROPIEDAD STRING (HAS OWN PROPERTY), aqui se preguntará si esa propiedad existe
+
+function caoToFront (s) {
+
+ var mayusculas = "";
+ var minusculas = "";
+for (var i = 0; i <s.length; i++){
+ if(s[i] === s[i].toUpperCase() ){
+   mayusculas += s[i];
+} else { 
+   minusculas += s[i]
+   }
+}
+  return mayusculas + minusculas 
+}
+
+function asAmirror (str){
+ 
+//INVESTIGAR EL METODO SPLIT Y JOIN
+
+var fraseinvertida = str.split(" ").map
+(function (palabra){
+ for (var i = palabra.length -1; i >=0; i--){
+ cadaPalabra = cadaPalabra + palabra[i]
+}
+ return cadaPalabra;
+}).join(" ")
+ 
+ return fraseInvertida 
+
+}
+
+//ALTERNATIVAMENTE
+ //INVESTIGAR REVERSE
+var fraseinvertida = str.split(" ").map(function(palabra){
+return palabra.split("").reverse().join("")}).join(" ")
+ 
+ return fraseinvertida
+}
+
+function capicua(numero) {
+
+ //INVESTIGAR TOSTRING
+
+ var numeroStr = numero.toString();
+ var numeroAlreves = numeroStr.split("").reverse().join()
+ if (numeroStr === numeroAlreves) {
+return "Es capicua"
+} esle {
+ return "No es capicua
+  }
+}
+
+ //ALTERNATIVAMENTE
+
+  var numeroStr = numero.toString();
+ var numeroAlreves = "";
+ for (var i = numeroStr.length - 1; i>= 0; i--){
+ numeroAlreves = numeroAlreves + numeroStr[i];
+}
+if (numeroAlreves === numeroStr) {
+return "es..."
+} else {
+return "no es..."
+}
+
+function deleteAbc (cadena) {
+ var sinabc = "";
+ for (i = 0, i <cadena.length, i++){
+  if (cadena[i] === "a" || cadena[i] === "b" || cadena[i] === "c") {
+    continue; 
+} else {
+ sinabc = sinabc + cadena[i]
+}
+} return sinabc 
+
+ // aqui el if detecatará si la cadena de texto tiene las letras solicitadas, si las tiene sólo continuara revisando pero si no las tiene las agregará a la variable sinabc conformando así la nueva palabra sin las letras a b y c
+
+function sortArray(arr){
+ //USANDO UN BUCLE FOR
+
+var recorrido = true
+while(recorrido {
+  recorrido = false; 
+ for (var i = 0, arr.length -  1, i++){
+ if(arr[i].length > arr[i + 1].length){
+  var palabraLarga = arr[i];
+ arr[i] = arr[i + 1]
+ arr[i + 1] = palabraLarga;
+ recorrido = true
+  }
+}
+ }
+  return arr;  
+}
+
+ // aqui se uso el while para decirle que hiciera el recorrido siempre y cuando hubiera una palabra que pudiera ordenar, de modo que se pone un recorrido cada vez que se pueda cambiar, al final termina por hacer un ultimo recorrido y si ya no se puede cambiar nada se detiene
+// ALTERNATIVAMENTE 
+
+ let comparar = function (a, b){
+ return a.length - b.length;
+};
+ return arr.sort(comparar) ;
+
+// INVESTIGAR FUNCION SORT
+
+function buscoInterseccion (arreglo1, arreglo2) {
+ var arregloDef =[]
+ for (var i = 0; i <arreglo1.length; i++){
+  for (var x = 0; x <arreglo2.length; x++){
+  if (arreglo1[i] === arreglo2[2]){
+arregloDef.push(arreglo1[i]);
+   }
+ }
+} 
+
+ return arregloDef
+
+
+// aqui se establecieron dos bucles for (un bucle for anidado) para recorrer los dos arrays, se estableció un if para determinar si el arreglo 1 concuerda con el dato del arreglo 2 entonces se forme en un nuevo arreglo
